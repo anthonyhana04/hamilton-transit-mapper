@@ -52,11 +52,17 @@ main {
     border-bottom: 1px solid #eee;
 }
 
+.legend h3 small {
+    font-weight: normal;
+    font-size: 0.8rem;
+    color: #666;
+}
+
 .controls {
     margin-bottom: 1.5rem;
 }
 
-#toggle-stops {
+.control-button {
     padding: 0.5rem 1rem;
     background-color: #1A4D2E;
     color: white;
@@ -65,10 +71,28 @@ main {
     cursor: pointer;
     font-size: 0.9rem;
     width: 100%;
+    margin-bottom: 0.5rem;
 }
 
-#toggle-stops:hover {
+.control-button:hover {
     background-color: #2a5d3e;
+}
+
+.control-button.active {
+    background-color: #2a5d3e;
+}
+
+.control-button:disabled {
+    background-color: #6c8976;
+    cursor: not-allowed;
+}
+
+#reset-view {
+    background-color: #666;
+}
+
+#reset-view:hover {
+    background-color: #555;
 }
 
 #routes-list {
@@ -84,6 +108,17 @@ main {
     padding: 0.5rem;
     border-radius: 4px;
     background-color: #f5f5f5;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.route-item:hover {
+    background-color: #e5e5e5;
+}
+
+.route-item.active {
+    background-color: #d5d5d5;
+    font-weight: bold;
 }
 
 .route-color {
@@ -106,6 +141,19 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+.leaflet-popup-content {
+    font-size: 0.9rem;
+}
+
+.bus-count {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: #666;
+    background-color: #eee;
+    padding: 2px 6px;
+    border-radius: 10px;
 }
 
 @media (max-width: 768px) {
