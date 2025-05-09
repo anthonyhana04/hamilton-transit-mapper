@@ -1,0 +1,32 @@
+<!-- hamilton-transit-map/frontend/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamilton Transit Map</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <h1>Hamilton Transit Real-Time Map</h1>
+        <div class="last-updated">Last Updated: <span id="update-time">Loading...</span></div>
+    </header>
+    
+    <main>
+        <div id="map"></div>
+        <div class="legend">
+            <h3>Bus Routes</h3>
+            <div id="routes-list"></div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Data source: <a href="https://opendata.hamilton.ca/GTFS-RT/" target="_blank">Hamilton Open Data - GTFS-RT</a></p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
