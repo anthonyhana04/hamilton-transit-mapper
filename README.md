@@ -2,7 +2,7 @@
 
 A real-time transit tracking application for Hamilton, Ontario's public transportation system. This application displays bus locations, routes, and stops on an interactive map, providing up-to-date information for commuters.
 
-![Hamilton Transit Map Screenshot](https://raw.githubusercontent.com/anthonyhana04/hamilton-transit-map/main/screenshots/map-view.png)
+![Hamilton Transit Map Screenshot](https://github.com/anthonyhana04/hamilton-transit-mapper/blob/main/screenshots/map-view.png)
 
 ## Table of Contents
 - [Features](#features)
@@ -40,7 +40,9 @@ A real-time transit tracking application for Hamilton, Ontario's public transpor
 - **OpenStreetMap**: Map tiles provider
 
 ### Data Sources
-- Hamilton Open Data Portal: [GTFS-RT Feed](https://opendata.hamilton.ca/GTFS-RT/)  
+- Hamilton Open Data Portal:
+  - [GTFS-RT Feed](https://opendata.hamilton.ca/GTFS-RT/)
+  - [GTFS-STATIC](https://opendata.hamilton.ca/GTFS-Static/)  
 
 ## Installation
 
@@ -59,7 +61,7 @@ cd hamilton-transit-map
 
 2. Create a virtual environment (optional but recommended):
 ```bash
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate  # On Windows, use: venv\Scripts\activate
 ```
 
@@ -70,13 +72,14 @@ pip install -r requirements.txt
 
 4. Run the application:
 ```bash
-python backend/server.py
+python3 backend/server.py
 ```
 
 5. Open your browser and navigate to:
 ```
-(it should automatically open)
 http://localhost:8000
+
+(it should automatically open)
 ```
 
 ## Usage
@@ -103,28 +106,28 @@ The application provides several RESTful API endpoints:
 
 ```
 hamilton-transit-map/
-├── backend/                # Server-side code
-│   ├── data/               # GTFS static data storage
-│   ├── gtfs_static_parser.py  # Static GTFS data parser
-│   ├── gtfs_realtime_parser.py # Real-time GTFS data parser
-│   └── server.py           # Flask application
-├── frontend/              # Client-side code
-│   ├── css/               # Stylesheets
-│   │   └── style.css      # Main stylesheet
-│   ├── js/                # JavaScript modules
-│   │   ├── app.js         # Main application
-│   │   ├── bus-manager.js # Bus tracking functionality
-│   │   ├── config.js      # Configuration constants
-│   │   ├── map-manager.js # Map handling functionality
-│   │   ├── route-manager.js # Route selection handling
-│   │   ├── shape-manager.js # Route shapes handling
-│   │   └── stop-manager.js  # Bus stops handling
-│   └── index.html         # Main HTML page
-├── screenshots/           # Application screenshots
-├── .gitignore             # Git ignore file
-├── LICENSE                # MIT License
-├── README.md              # This file
-└── requirements.txt       # Python dependencies
+├── backend/                      # Server-side code
+│   ├── data/                     # GTFS static data storage
+│   ├── gtfs_static_parser.py     # Static GTFS data parser
+│   ├── gtfs_realtime_parser.py   # Real-time GTFS data parser
+│   └── server.py                 # Flask application
+├── frontend/                     # Client-side code
+│   ├── css/                      # Stylesheets
+│   │   └── style.css             # Main stylesheet
+│   ├── js/                       # JavaScript modules
+│   │   ├── app.js                # Main application
+│   │   ├── bus-manager.js        # Bus tracking functionality
+│   │   ├── config.js             # Configuration constants
+│   │   ├── map-manager.js        # Map handling functionality
+│   │   ├── route-manager.js      # Route selection handling
+│   │   ├── shape-manager.js      # Route shapes handling
+│   │   └── stop-manager.js       # Bus stops handling
+│   └── index.html                # Main HTML page
+├── screenshots/                  # Application screenshots
+├── .gitignore                    # Git ignore file
+├── LICENSE                       # MIT License
+├── README.md                     # This file
+└── requirements.txt              # Python dependencies
 ```
 
 ## Building from Source
