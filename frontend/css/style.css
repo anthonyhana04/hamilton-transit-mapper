@@ -52,6 +52,25 @@ main {
     border-bottom: 1px solid #eee;
 }
 
+.controls {
+    margin-bottom: 1.5rem;
+}
+
+#toggle-stops {
+    padding: 0.5rem 1rem;
+    background-color: #1A4D2E;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+#toggle-stops:hover {
+    background-color: #2a5d3e;
+}
+
 #routes-list {
     display: flex;
     flex-direction: column;
