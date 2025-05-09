@@ -52,6 +52,7 @@ jspm_packages/
 .env.production.local
 
 # Project specific
+data/
 *.pb
 *.pbf
 *.pbbin
